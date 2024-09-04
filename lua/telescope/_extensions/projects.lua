@@ -88,6 +88,7 @@ local function find_project_files(prompt_bufnr)
   local opt = {
     cwd = project_path,
     hidden = config.options.show_hidden,
+    file_ignore_patterns = config.options.file_ignore_patterns,
     mode = "insert",
   }
   if cd_successful then
@@ -100,6 +101,7 @@ local function browse_project_files(prompt_bufnr)
   local opt = {
     cwd = project_path,
     hidden = config.options.show_hidden,
+    file_ignore_patterns = config.options.file_ignore_patterns,
   }
   if cd_successful then
     require("telescope").extensions.file_browser.file_browser(opt)
@@ -111,6 +113,7 @@ local function search_in_project_files(prompt_bufnr)
   local opt = {
     cwd = project_path,
     hidden = config.options.show_hidden,
+    file_ignore_patterns = config.options.file_ignore_patterns,
     mode = "insert",
   }
   if cd_successful then
@@ -123,6 +126,7 @@ local function recent_project_files(prompt_bufnr)
   local opt = {
     cwd_only = true,
     hidden = config.options.show_hidden,
+    file_ignore_patterns = config.options.file_ignore_patterns,
   }
   if cd_successful then
     builtin.oldfiles(opt)
