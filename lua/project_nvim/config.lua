@@ -49,7 +49,6 @@ M.defaults = {
       delete_project = "d",
       search_in_project_files = "s",
       recent_project_files = "r",
-      change_working_directory = "w",
     },
     i = {
       find_project_files = "<c-f>",
@@ -57,7 +56,6 @@ M.defaults = {
       delete_project = "<c-d>",
       search_in_project_files = "<c-s>",
       recent_project_files = "<c-r>",
-      change_working_directory = "<c-w>",
     }
   }
 }
